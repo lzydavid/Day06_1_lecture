@@ -80,6 +80,9 @@ public final class App {
             return a+b;
         };
 
+        MyMessageInterface printString = (a) -> {
+            System.out.println(a);
+        };
 
         System.out.println("addOperation: " + addOperation.process(1,1));
 
@@ -89,6 +92,7 @@ public final class App {
 
         System.out.println("addOperation: " + concatSTring.process("The quick brown fox ","jumps over the wall. "));
         
+        printString.printMessage("Lets take a break at 12pm.");
 
     }
 }
