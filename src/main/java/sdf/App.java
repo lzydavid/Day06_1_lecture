@@ -63,5 +63,32 @@ public final class App {
         executorService.execute(mRI5);
         executorService.shutdown();
 
+        //LAMBDA        
+        MyRunnableInterface<Integer> addOperation = (a,b) -> {
+            return a+b;
+        };
+
+        MyRunnableInterface<Integer> mutipleOperation = (a,b) -> {
+            return a*b;
+        };
+
+        MyRunnableInterface<Integer> subtractOperation = (a,b) -> {
+            return a-b;
+        };
+
+        MyRunnableInterface<String> concatSTring = (a,b) -> {
+            return a+b;
+        };
+
+
+        System.out.println("addOperation: " + addOperation.process(1,1));
+
+        System.out.println("addOperation: " + mutipleOperation.process(2,5));
+
+        System.out.println("addOperation: " + subtractOperation.process(10,5));
+
+        System.out.println("addOperation: " + concatSTring.process("The quick brown fox ","jumps over the wall. "));
+        
+
     }
 }
